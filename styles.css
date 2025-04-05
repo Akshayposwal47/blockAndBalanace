@@ -1,45 +1,74 @@
+:root {
+    --primary-color: #ff6f61;
+    --primary-hover: #e65a50;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--bs-body-font-family);
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: var(--bs-gray-100);
 }
 
 header {
-    background-color: #ff6f61;
-    color: white;
-    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
+    padding: 1.5rem;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 main {
-    padding: 1rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #balloon-list, #cart {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .balloon {
-    border: 1px solid #ddd;
-    padding: 1rem;
+    border: 1px solid var(--bs-gray-300);
+    padding: 1.5rem;
     margin-bottom: 1rem;
-    background-color: #fff;
+    background-color: var(--bs-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    transition: transform 0.2s ease;
+}
+
+.balloon:hover {
+    transform: translateY(-2px);
 }
 
 .buy-button {
-    background-color: #ff6f61;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bs-white);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .buy-button:hover {
-    background-color: #e65a50;
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 #cart {
-    border-top: 2px solid #ddd;
-    padding-top: 1rem;
+    border-top: 2px solid var(--bs-gray-300);
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .balloon {
+        padding: 1rem;
+    }
 }
