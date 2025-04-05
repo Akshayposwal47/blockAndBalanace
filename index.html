@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Balloon Shop!</h1>
+    </header>
+    <main>
+        <section id="balloon-list">
+            <h2>Our Balloons</h2>
+            <div class="balloon" data-price="5">
+                <p>Red Balloon - $5</p>
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="balloon" data-price="7">
+                <p>Blue Balloon - $7</p>
+                <button class="buy-button">Buy</button>
+            </div>
+            <div class="balloon" data-price="10">
+                <p>Gold Balloon - $10</p>
+                <button class="buy-button">Buy</button>
+            </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0</span></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
