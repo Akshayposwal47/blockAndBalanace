@@ -1,38 +1,66 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Balloon Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+=======
+    <title>Community Emergency Loan Network</title>
+>>>>>>> efcfdd2305434ca3f0f50ff355e276dc5540a3d8
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to the Balloon Shop!</h1>
+        <nav>
+            <div class="logo">Emergency Loan Network</div>
+            <div class="nav-links">
+                <a href="#borrow">Borrow</a>
+                <a href="#lend">Lend</a>
+                <a href="#community">Community</a>
+                <span id="walletBalance">Balance: $0.00</span>
+                <button id="connectWallet">Connect Wallet</button>
+            </div>
+        </nav>
     </header>
+
     <main>
-        <section id="balloon-list">
-            <h2>Our Balloons</h2>
-            <div class="balloon" data-price="5">
-                <p>Red Balloon - $5</p>
-                <button class="buy-button">Buy</button>
-            </div>
-            <div class="balloon" data-price="7">
-                <p>Blue Balloon - $7</p>
-                <button class="buy-button">Buy</button>
-            </div>
-            <div class="balloon" data-price="10">
-                <p>Gold Balloon - $10</p>
-                <button class="buy-button">Buy</button>
+        <section id="hero">
+            <h1>Community-Powered Emergency Loans</h1>
+            <p>Fast, fair, and accessible financial support when you need it most</p>
+        </section>
+
+        <section id="loan-calculator">
+            <h2>Loan Calculator</h2>
+            <div class="calculator-container">
+                <div class="input-group">
+                    <label for="amount">Loan Amount (USD):</label>
+                    <input type="number" id="amount" min="100" max="5000" step="100">
+                </div>
+                <div class="input-group">
+                    <label for="duration">Duration (days):</label>
+                    <input type="number" id="duration" min="7" max="90">
+                </div>
+                <div class="input-group">
+                    <label for="purpose">Loan Purpose:</label>
+                    <select id="purpose">
+                        <option value="medical">Medical Emergency</option>
+                        <option value="housing">Housing Emergency</option>
+                        <option value="utilities">Utilities</option>
+                        <option value="other">Other Emergency</option>
+                    </select>
+                </div>
+                <button onclick="calculateLoan()">Calculate</button>
+                <div id="loan-summary"></div>
             </div>
         </section>
-        <section id="cart">
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: $<span id="total-price">0</span></p>
+
+        <section id="active-loans">
+            <h2>Active Community Loans</h2>
+            <div id="loans-grid"></div>
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
