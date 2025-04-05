@@ -1,0 +1,71 @@
+/* Navigation and Header Styles */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.auth-links {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.login-link {
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.login-link:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.register-link {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.register-link:hover {
+    background-color: #45a049;
+}
+
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .auth-links {
+        margin: 10px 0;
+    }
+}
